@@ -8,5 +8,4 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-  file: test.pkg
-  
+  file: build/*
