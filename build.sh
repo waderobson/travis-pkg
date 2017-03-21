@@ -1,1 +1,5 @@
-pkgbuild --root ROOT --identifier com.test.com --version 0.2 test.pkg
+
+chown +x scripts/
+if [ -z echo $TRAVIS_TAG ]; then
+pkgbuild --root ROOT --scripts scripts --identifier com.example.pkg --version $(echo $TRAVIS_TAG | cut -c2-) build/example.pkg
+fi
